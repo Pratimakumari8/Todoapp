@@ -1,6 +1,6 @@
 export function Tabs(props){
     const{todos , selectedTab, setSelectedTab} = props
-    const tabs = ['All' , 'Open ' , 'Completed']
+    const tabs = ['All' , 'Open' , 'Completed']
     return(
         <nav className="tab-container">
             { tabs.map((tab, tabIndex) => {

@@ -25,14 +25,14 @@ function App() {
   }
 
   function handleCompleteTodo(index) {
-    // update/edit/modify
-    let newTodoList = [...todos]
-    let completedTodo = todos[index]
-    completedTodo['complete'] = true
-    newTodoList[index] = completedTodo
-    setTodos(newTodoList)
-    handleSaveData(newTodoList)
-  }
+    let newTodoList = [...todos]; 
+    let completedTodo = { ...newTodoList[index] }; // Create a new object
+    completedTodo.complete = true; // Update the complete status
+    newTodoList[index] = completedTodo; // Assign the updated object to the array
+    setTodos(newTodoList);
+    handleSaveData(newTodoList);
+}
+
 
   function handleEditTodo(index) {
     // step 1 - create a duplicate array
